@@ -54,5 +54,52 @@
 ![](https://github.com/chnz2k/Kill-the-log-stream-of-kaspersky-agent/blob/main/hosts.JPG?raw=true)
 ![](https://github.com/chnz2k/Kill-the-log-stream-of-kaspersky-agent/blob/main/trace.JPG?raw=true)
 
+> Checking the advanced Firewall rules (INBOUND), I found that Kaspersky has already a defined rules, that the only way to contact the server for updates (INBOUND).
+
+![](https://github.com/chnz2k/Kill-the-log-stream-of-kaspersky-agent/blob/main/rules_1.JPG?raw=true)
+
+> So I taught about reversing those rules and made them Blocking instead of allowing (Still Enabled).
+
+Change “Allow the connection” to “Block the connection” :
+
+![](https://github.com/chnz2k/Kill-the-log-stream-of-kaspersky-agent/blob/main/rules_details_1.JPG?raw=true)
+
+> The 3 scopes “Domain”, “Private”, “Public” shall be selected :
+![](https://github.com/chnz2k/Kill-the-log-stream-of-kaspersky-agent/blob/main/rules_details_2.JPG?raw=true)
+
+> After applying same configuration to all “Kaspersky” rules the output should be something similar to this :
+![](https://github.com/chnz2k/Kill-the-log-stream-of-kaspersky-agent/blob/main/rules_details_3.JPG?raw=true)
+
+> Now for the OUTBOUND Rules we should consider adding two main rules for both protocoles “TCP” and “UDP” :
+
+Go to “New Rule” :
+![](https://github.com/chnz2k/Kill-the-log-stream-of-kaspersky-agent/blob/main/rules_details_4.JPG?raw=true)
+
+Select “port” :
+![](https://github.com/chnz2k/Kill-the-log-stream-of-kaspersky-agent/blob/main/rules_details_5.JPG?raw=true)
+
+Edit “Specific remote ports” to “13000” :
+![](https://github.com/chnz2k/Kill-the-log-stream-of-kaspersky-agent/blob/main/rules_details_6.JPG?raw=true)
+
+Chose “Block the connection” :
+![](https://github.com/chnz2k/Kill-the-log-stream-of-kaspersky-agent/blob/main/rules_details_7.JPG?raw=true)
+
+Make sure the 3 scopes are selected :
+![](https://github.com/chnz2k/Kill-the-log-stream-of-kaspersky-agent/blob/main/rules_details_8.JPG?raw=true)
+
+> Then you repeat the same thing for “UDP”.
+
+The output should be like something similar to this :
+![](https://github.com/chnz2k/Kill-the-log-stream-of-kaspersky-agent/blob/main/rules_details_9.JPG?raw=true)
+
 #Demo
+After an execution of a malicious payload the agent did popup a notification about the detection in the local machine :
+![](https://github.com/chnz2k/Kill-the-log-stream-of-kaspersky-agent/blob/main/rules_details_10.JPG?raw=true)
+
+Back to our “SIEM” nothing was detected or in other words the log stream could not reach the server :
+![](https://github.com/chnz2k/Kill-the-log-stream-of-kaspersky-agent/blob/main/rules_details_11.JPG?raw=true)
+
+> Well, Nothing reported to our “SIEM” no detection of the payload execution on the “SIEM” solution neither the evasion technique applied !
+
 #Conclusion
+> Any local admin account can cause this log stream issue and I believe that “kaspersky” agent should setup some kind of measure to protect or at least detect these techniques, It’s so simple but still effective !
