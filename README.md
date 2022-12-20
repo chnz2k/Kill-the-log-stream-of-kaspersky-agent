@@ -4,6 +4,11 @@
  * short answer is "Simplly beacause i can".
  * The truth is "that i can't uninstall the agent from the machine because of the company has a compliance certificate ;)"
 
+# Product informations
+Product name : Kaspersky Endpoint Security
+Version number : 11.6.0.394 AES56
+Operating system : Windows 10 Pro (22H2) 19045.2364, Windows Feature Experience Pack 120.2212.4190.0
+
 # One more thing you might see hidden/blured parts of pictures below, it's because the demo was tested in a real infastructure (not a LAB).
 
 1. ##### Introduction
