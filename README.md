@@ -13,11 +13,10 @@
 # 1. Introduction
 > Using a local admin account, I have successfully killed the log stream between Kaspersky agent and QRadar SIEM, using a basic way to prevent the connection to the server but most importantly the Agent has not reported the stream issue to the SIEM, so in this use case we shall see how a Cybercriminal could blind the soc team from the activities on a certain machine.
 
-#Kaspersky Agent State
-
+# 2. Kaspersky Agent State
 ![](https://github.com/chnz2k/Kill-the-log-stream-of-kaspersky-agent/blob/main/agent-state.jpg?raw=true)
 
-#Default Log Stream
+# 3. Default Log Stream
 
 ![](https://github.com/chnz2k/Kill-the-log-stream-of-kaspersky-agent/blob/main/log_stream.JPG?raw=true)
 
@@ -25,7 +24,7 @@
 
   • So how can we can kill the communication between the agent and the SIEM ?
 
-#Enumeration and Analysis
+# 4. Enumeration and Analysis
 
 > Let’s start by a small network monitoring using “wireshark” to see what’s happening !
 
@@ -45,7 +44,7 @@
 
 > We can see a domain in the TCP STREAM string which is the ip that Kaspersky agent report to on the port 13000.
 
-#Kill Stream configuration
+# 5. Kill Stream configuration
 
 > Let’s try some basic way to kill the log stream between the agent and our SIEM.
 
@@ -92,7 +91,7 @@ Make sure the 3 scopes are selected :
 The output should be like something similar to this :
 ![](https://github.com/chnz2k/Kill-the-log-stream-of-kaspersky-agent/blob/main/rules_details_9.JPG?raw=true)
 
-#Demo
+# 6. Demo
 After an execution of a malicious payload the agent did popup a notification about the detection in the local machine :
 ![](https://github.com/chnz2k/Kill-the-log-stream-of-kaspersky-agent/blob/main/rules_details_10.JPG?raw=true)
 
@@ -101,5 +100,5 @@ Back to our “SIEM” nothing was detected or in other words the log stream cou
 
 > Well, Nothing reported to our “SIEM” no detection of the payload execution on the “SIEM” solution neither the evasion technique applied !
 
-#Conclusion
+# 7. Conclusion
 > Any local admin account can cause this log stream issue and I believe that “kaspersky” agent should setup some kind of measure to protect or at least detect these techniques, It’s so simple but still effective !
