@@ -10,7 +10,7 @@
 7. ##### Conclusion
 
 
-#Introduction
+# 1. Introduction
 > Using a local admin account, I have successfully killed the log stream between Kaspersky agent and QRadar SIEM, using a basic way to prevent the connection to the server but most importantly the Agent has not reported the stream issue to the SIEM, so in this use case we shall see how a Cybercriminal could blind the soc team from the activities on a certain machine.
 
 #Kaspersky Agent State
