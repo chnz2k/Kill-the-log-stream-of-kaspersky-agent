@@ -1,11 +1,14 @@
 # Killing the Log Stream from Kaspersky Endpoint Security Agent
 
 
-Table of Contents
+1. ##### Introduction
+2. ##### Kaspersky Agent State
+3. ##### Default Log Stream
+4. ##### Enumeration and Analysis
+5. ##### Kill Stream configuration
+6. ##### Demo
+7. ##### Conclusion
 
-[TOCM]
-
-[TOC]
 
 #Introduction
 > Using a local admin account, I have successfully killed the log stream between Kaspersky agent and QRadar SIEM, using a basic way to prevent the connection to the server but most importantly the Agent has not reported the stream issue to the SIEM, so in this use case we shall see how a Cybercriminal could blind the soc team from the activities on a certain machine.
