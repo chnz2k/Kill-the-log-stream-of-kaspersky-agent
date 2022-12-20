@@ -120,6 +120,6 @@ The output should be like something similar to this :
 •	Well, Nothing reported to our “SIEM” no detection of the payload execution on the “SIEM” solution neither the evasion technique applied !
 
 
-7 nclusion
+7 Conclusion
 •	Any local admin account can cause this log stream issue and I believe that “kaspersky” agent should setup some kind of measure to protect or at least detect these techniques, It’s so simple but still effective !
 
