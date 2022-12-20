@@ -1,5 +1,10 @@
 # Killing the Log Stream from Kaspersky Endpoint Security Agent
 
+# Why i did it ? 
+ * short answer is "Simplly beacause i can".
+ * The truth is "that i can't uninstall the agent from the machine because of the company has a compliance certificate ;)"
+
+# One more thing you might see hidden/blured parts of pictures below, it's because the demo was tested in a real infastructure (not a LAB).
 
 1. ##### Introduction
 2. ##### Kaspersky Agent State
