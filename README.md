@@ -77,18 +77,23 @@ Change “Allow the connection” to “Block the connection” :
 > Now for the OUTBOUND Rules we should consider adding two main rules for both protocoles “TCP” and “UDP” :
 
 Go to “New Rule” :
+
 ![](https://github.com/chnz2k/Kill-the-log-stream-of-kaspersky-agent/blob/main/rules_details_4.JPG?raw=true)
 
 Select “port” :
+
 ![](https://github.com/chnz2k/Kill-the-log-stream-of-kaspersky-agent/blob/main/rules_details_5.JPG?raw=true)
 
 Edit “Specific remote ports” to “13000” :
+
 ![](https://github.com/chnz2k/Kill-the-log-stream-of-kaspersky-agent/blob/main/rules_details_6.JPG?raw=true)
 
 Chose “Block the connection” :
+
 ![](https://github.com/chnz2k/Kill-the-log-stream-of-kaspersky-agent/blob/main/rules_details_7.JPG?raw=true)
 
 Make sure the 3 scopes are selected :
+
 ![](https://github.com/chnz2k/Kill-the-log-stream-of-kaspersky-agent/blob/main/rules_details_8.JPG?raw=true)
 
 > Then you repeat the same thing for “UDP”.
